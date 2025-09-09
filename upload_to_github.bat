@@ -1,0 +1,23 @@
+@echo off
+echo Starting clean Git upload...
+
+echo Removing existing .git folder...
+rmdir /s /q .git 2>nul
+
+echo Initializing new Git repository...
+git init
+
+echo Adding all files...
+git add .
+
+echo Creating initial commit...
+git commit -m "Initial commit - KR Studio VocalRM"
+
+echo Adding remote origin...
+git remote add origin https://github.com/roizohar199/KR-STUDIO-VocalRM.git
+
+echo Pushing to GitHub...
+git push -u origin main
+
+echo Done! Check https://github.com/roizohar199/KR-STUDIO-VocalRM
+pause
